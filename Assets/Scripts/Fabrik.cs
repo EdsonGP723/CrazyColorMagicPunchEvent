@@ -33,13 +33,14 @@ public class Fabrik : MonoBehaviour
             }
         }
 
-        startPosition = bones[0].position;
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        startPosition = bones[0].position;
         SolveIK();
     }
 
