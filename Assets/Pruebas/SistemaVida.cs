@@ -5,7 +5,7 @@ using UnityEngine;
 public class SistemaVida : MonoBehaviour
 {
     public int vida = 100;
-
+    private Rigidbody rb;
 
     public void RestarVida(int cantidad)
     {
@@ -14,16 +14,16 @@ public class SistemaVida : MonoBehaviour
 
     void Start()
     {
-        
+        rb.GetComponent<Rigidbody>();
     }
 
     
     void Update()
     {
-        Rigidbody rb;
+       
         if (vida == 0)
         {
-           // rb.gameObject.GetComponent<Rigidbody>().i
+            rb.gameObject.GetComponent<Rigidbody>().mass = 0.1f;
         }
     }
 }
