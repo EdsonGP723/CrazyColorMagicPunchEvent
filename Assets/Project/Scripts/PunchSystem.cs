@@ -8,7 +8,6 @@ public class PunchSystem : MonoBehaviour
     public PlayerInput inputs;
     [Header ("Target L")]
     public Transform targetL;
-    public Vector3 targetLVec;
     public Transform targetLPos;
     [Header ("Target R")]
     public Transform targetR;
@@ -23,18 +22,25 @@ public class PunchSystem : MonoBehaviour
             Debug.Log("Golpe izquierdo");
             StartCoroutine(PunchL());
         }
+
+        if (inputs.actions["PunchR"].WasPressedThisFrame()){
+            Debug.Log("Golpe izquierdo");
+            StartCoroutine(PunchR());
+        }
         
     }
 
     public IEnumerator PunchL(){
-        Vector3 Adelante = Direction();
+        targetL.position += targetL.forward;
         yield return new WaitForSeconds(.3f);
         targetL.position = targetLPos.position;
     }
 
-    public Vector3 Direction(){
-        Vector3 Foward = targetL.forward;
-        Foward.Normalize();
-        return Foward;
+    public IEnumerator PunchR(){
+        targetR.position += targetR.forward;
+        yield return new WaitForSeconds(.3f);
+        targetR.position = targetRPos.position;
     }
+
+    
 }
