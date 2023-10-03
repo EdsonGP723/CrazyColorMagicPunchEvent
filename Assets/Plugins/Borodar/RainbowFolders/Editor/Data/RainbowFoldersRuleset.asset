@@ -113,13 +113,13 @@ MonoBehaviour:
     Key: Materials
     Ordinal: 8
     Priority: 0
-    IconType: 2070
+    IconType: 2570
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
-    BackgroundType: 0
+    BackgroundType: 160
     BackgroundTexture: {fileID: 0}
-    IsBackgroundRecursive: 0
+    IsBackgroundRecursive: 1
     IsHidden: 0
   - Type: 0
     Key: Meshes
@@ -137,23 +137,23 @@ MonoBehaviour:
     Key: Plugins
     Ordinal: 10
     Priority: 0
-    IconType: 2100
+    IconType: 2600
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
-    BackgroundType: 0
+    BackgroundType: 190
     BackgroundTexture: {fileID: 0}
-    IsBackgroundRecursive: 0
+    IsBackgroundRecursive: 1
     IsHidden: 0
   - Type: 0
     Key: Prefabs
     Ordinal: 11
     Priority: 0
-    IconType: 2110
+    IconType: 2610
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
-    BackgroundType: 0
+    BackgroundType: 130
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
     IsHidden: 0
@@ -161,11 +161,11 @@ MonoBehaviour:
     Key: Project
     Ordinal: 12
     Priority: 0
-    IconType: 2120
+    IconType: 2620
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
-    BackgroundType: 0
+    BackgroundType: 150
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
     IsHidden: 0
@@ -189,7 +189,7 @@ MonoBehaviour:
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
-    BackgroundType: 0
+    BackgroundType: 80
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
     IsHidden: 0
@@ -197,23 +197,23 @@ MonoBehaviour:
     Key: Scenes
     Ordinal: 15
     Priority: 0
-    IconType: 2150
+    IconType: 2650
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
-    BackgroundType: 0
+    BackgroundType: 50
     BackgroundTexture: {fileID: 0}
-    IsBackgroundRecursive: 0
+    IsBackgroundRecursive: 1
     IsHidden: 0
   - Type: 0
     Key: Scripts
     Ordinal: 16
     Priority: 0
-    IconType: 2160
+    IconType: 2660
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
-    BackgroundType: 0
+    BackgroundType: 150
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
     IsHidden: 0
@@ -334,6 +334,30 @@ MonoBehaviour:
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
     BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0
+  - Type: 1
+    Key: Assets/Project/Resources/StarterAssets
+    Ordinal: 27
+    Priority: 0
+    IconType: 2610
+    SmallIcon: {fileID: 0}
+    LargeIcon: {fileID: 0}
+    IsIconRecursive: 0
+    BackgroundType: 130
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0
+  - Type: 1
+    Key: Assets/Project/Resources/Enemy
+    Ordinal: 28
+    Priority: 0
+    IconType: 10
+    SmallIcon: {fileID: 0}
+    LargeIcon: {fileID: 0}
+    IsIconRecursive: 0
+    BackgroundType: 10
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
     IsHidden: 0

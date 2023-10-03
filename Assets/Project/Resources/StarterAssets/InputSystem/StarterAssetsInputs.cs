@@ -61,6 +61,7 @@ namespace StarterAssets
 			jump = newJumpState;
 		}
 
+
 		public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
