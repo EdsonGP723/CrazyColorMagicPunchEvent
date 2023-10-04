@@ -7,12 +7,14 @@ public class RagdollController : MonoBehaviour
     public Animator animator;
     public Collider mainCollider;
     public Rigidbody mainRigidbody;
+    private IA ia;
 
     public List<Rigidbody> rigidbodies;
     public List<Collider> colliders;
     // Start is called before the first frame update
     void Start()
     {
+        ia = GetComponent<IA>();
         foreach (var item in GetComponentsInChildren<Rigidbody>())
         {
             if (item.gameObject != this.gameObject)
@@ -40,11 +42,7 @@ public class RagdollController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Toggle();
-            //   mainCollider.enabled = false;
-        }
+       
 
     }
     bool value = true;
@@ -74,10 +72,14 @@ public class RagdollController : MonoBehaviour
         
         if (collision.transform.tag == "Hit")
         {
-            Health_and_Damage.life -= 10;
+            Health_and_Damage.life -= 10; 
+            var rb = collision.collider.attachedRigidbody;
+            rb.AddForce(-collision.contacts[0].normal * 15000, ForceMode.Impulse);
             if (Health_and_Damage.life == 0)
             {
                 value = true;
+                ia.enabled = false;
+               
                 Toggle();
             }
             
