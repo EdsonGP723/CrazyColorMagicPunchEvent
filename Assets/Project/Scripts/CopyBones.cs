@@ -6,9 +6,12 @@ public class CopyBones : MonoBehaviour
 {
     [SerializeField] GameObject ragdoll;
     [SerializeField] GameObject animator;
+    //public Animator a;
 
     [SerializeField] private List<Transform> targetLimbs;
     [SerializeField] private List<ConfigurableJoint> m_ConfigurableJoints;
+
+    
 
 
     [SerializeField] List<Quaternion> targetInitialRotation;
@@ -41,7 +44,20 @@ public class CopyBones : MonoBehaviour
         {
             m_ConfigurableJoints[i].targetRotation = copyRotation(i);
         }
-        
+
+        if (Health_and_Damage.life == 0)
+        {
+            Rigidbody r = this.gameObject.GetComponent<Rigidbody>();
+            r.AddForce(Vector3.forward,ForceMode.Impulse);
+            //r.AddExplosionForce(10, transform.position.normalized,10);
+            //r.isKinematic = isActiveAndEnabled;
+            for (int i = 0; i < m_ConfigurableJoints.Count; i++)
+            {
+                m_ConfigurableJoints.Clear();
+            }
+
+
+        }
     }
 
     private Quaternion copyRotation(int i)
