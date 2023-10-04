@@ -10,7 +10,7 @@ public class MakeDamage : MonoBehaviour
     {
         if (collision.gameObject.tag == "enemy" || collision.gameObject.CompareTag("enemy"))
         {
-            collision.gameObject.GetComponent<Health_and_Damage>().SubstractLife(quantity);
+            
             Debug.Log("le dio");
         }
 
