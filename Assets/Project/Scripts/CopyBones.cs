@@ -47,14 +47,15 @@ public class CopyBones : MonoBehaviour
 
         if (Health_and_Damage.life == 0)
         {
-            Rigidbody r = this.gameObject.GetComponent<Rigidbody>();
-            r.AddForce(Vector3.forward,ForceMode.Impulse);
+            //Rigidbody r = this.gameObject.GetComponent<Rigidbody>();
+           // r.AddForce(Vector3.forward,ForceMode.Impulse);
             //r.AddExplosionForce(10, transform.position.normalized,10);
             //r.isKinematic = isActiveAndEnabled;
-            for (int i = 0; i < m_ConfigurableJoints.Count; i++)
-            {
-                m_ConfigurableJoints.Clear();
-            }
+
+            //RagdollController rg = gameObject.GetComponent<RagdollController>();
+           // rg.Toggle();
+
+
 
 
         }

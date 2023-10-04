@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bff4ab456462bb48a0afc38530e39cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rg: {fileID: 0}
 --- !u!65 &155405253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5319,6 +5320,7 @@ GameObject:
   - component: {fileID: 7686588452842702463}
   - component: {fileID: 7686588452842702464}
   - component: {fileID: 7686588452842702465}
+  - component: {fileID: 7686588452842702466}
   m_Layer: 6
   m_Name: mixamorig:Hips
   m_TagString: enemy
@@ -5338,6 +5340,7 @@ GameObject:
   - component: {fileID: 4307317908560714669}
   - component: {fileID: 7865121157816336857}
   - component: {fileID: 7865121157816336859}
+  - component: {fileID: 7865121157816336860}
   - component: {fileID: 7865121157816336858}
   m_Layer: 0
   m_Name: Ragdoll
@@ -7209,6 +7212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bff4ab456462bb48a0afc38530e39cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rg: {fileID: 7686588452842702466}
 --- !u!114 &7686588452842702465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7226,6 +7230,23 @@ MonoBehaviour:
   targetLimbs: []
   m_ConfigurableJoints: []
   targetInitialRotation: []
+--- !u!114 &7686588452842702466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7325456518753351734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ebb89e9bdcb6e4ba9c9fa10d22c6b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4307317908560714669}
+  mainCollider: {fileID: 7686588452842702462}
+  mainRigidbody: {fileID: 7686588452842702460}
+  rigidbodies: []
+  colliders: []
 --- !u!4 &7801529260643155062
 Transform:
   m_ObjectHideFlags: 0
@@ -7325,6 +7346,23 @@ MonoBehaviour:
   targetLimbs: []
   m_ConfigurableJoints: []
   targetInitialRotation: []
+--- !u!114 &7865121157816336860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7380650648410069869}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ebb89e9bdcb6e4ba9c9fa10d22c6b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4307317908560714669}
+  mainCollider: {fileID: 7686588452842702462}
+  mainRigidbody: {fileID: 7686588452842702460}
+  rigidbodies: []
+  colliders: []
 --- !u!4 &7865121159197388209
 Transform:
   m_ObjectHideFlags: 0

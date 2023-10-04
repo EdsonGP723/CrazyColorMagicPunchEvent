@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health_and_Damage : MonoBehaviour
 {
-    
+    public RagdollController rg;
     public static int life = 30;
     
 
@@ -22,6 +22,8 @@ public class Health_and_Damage : MonoBehaviour
         if (life == 0)
         {
             Debug.Log("ya no tiene vida");
+            rg = gameObject.GetComponent<RagdollController>();
+            rg.Toggle();
         }
     }
 }
