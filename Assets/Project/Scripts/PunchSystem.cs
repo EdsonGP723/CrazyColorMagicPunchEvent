@@ -12,6 +12,8 @@ public class PunchSystem : MonoBehaviour
     [Header ("Target R")]
     public Transform targetR;
     public Transform targetRPos;
+
+    public Collider leftCol, rightCol;
     
     private void Start() {
         
@@ -32,14 +34,18 @@ public class PunchSystem : MonoBehaviour
 
     public IEnumerator PunchL(){
         targetL.position += targetL.forward;
+        leftCol.enabled = enabled;
         yield return new WaitForSeconds(.3f);
         targetL.position = targetLPos.position;
+        leftCol.enabled = !enabled;
     }
 
     public IEnumerator PunchR(){
         targetR.position += targetR.forward;
+        rightCol.enabled = enabled;
         yield return new WaitForSeconds(.3f);
         targetR.position = targetRPos.position;
+        rightCol.enabled = !enabled;
     }
 
     

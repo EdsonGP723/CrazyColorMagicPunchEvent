@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -520,6 +520,10 @@ PrefabInstance:
       value: 0.83051413
       objectReference: {fileID: 0}
     - target: {fileID: 3907863441546649572, guid: 5219eb2f5f2e9bf4a8cad26598a1962d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3907863441546649572, guid: 5219eb2f5f2e9bf4a8cad26598a1962d, type: 3}
       propertyPath: m_Center.x
       value: 0.07667042
       objectReference: {fileID: 0}
@@ -901,6 +905,10 @@ PrefabInstance:
       value: 0.75585866
       objectReference: {fileID: 0}
     - target: {fileID: 3907863441546649572, guid: 5219eb2f5f2e9bf4a8cad26598a1962d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3907863441546649572, guid: 5219eb2f5f2e9bf4a8cad26598a1962d, type: 3}
       propertyPath: m_Center.x
       value: 0.0000000024858426
       objectReference: {fileID: 0}
@@ -1243,6 +1251,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &1727882917 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 3907863441546649572, guid: 5219eb2f5f2e9bf4a8cad26598a1962d, type: 3}
+  m_PrefabInstance: {fileID: 1029450534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1762425554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3907863441546649575, guid: 5219eb2f5f2e9bf4a8cad26598a1962d, type: 3}
@@ -1379,6 +1392,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quantity: 10
+--- !u!135 &1816979494 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 3907863441546649572, guid: 5219eb2f5f2e9bf4a8cad26598a1962d, type: 3}
+  m_PrefabInstance: {fileID: 575852614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1887708386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,6 +1495,8 @@ MonoBehaviour:
   targetLPos: {fileID: 542011851}
   targetR: {fileID: 475502905}
   targetRPos: {fileID: 1900749013}
+  leftCol: {fileID: 1727882917}
+  rightCol: {fileID: 1816979494}
 --- !u!114 &1930621653 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 453084650579209843, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
@@ -6579,6 +6599,7 @@ MonoBehaviour:
     m_Bits: 64
   jugador: {fileID: 890286917}
   velocidad: 2
+  rangoAtaque: 5
 --- !u!114 &5866666021641372465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10011,6 +10032,7 @@ MonoBehaviour:
     m_Bits: 64
   jugador: {fileID: 890286917}
   velocidad: 0.5
+  rangoAtaque: 0
 --- !u!54 &7865121157816336858
 Rigidbody:
   m_ObjectHideFlags: 0

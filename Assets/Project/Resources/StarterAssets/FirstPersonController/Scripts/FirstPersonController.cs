@@ -64,6 +64,9 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
+
+		public static int PlayerLife = 50;
+
 	
 #if ENABLE_INPUT_SYSTEM
 		private PlayerInput _playerInput;
