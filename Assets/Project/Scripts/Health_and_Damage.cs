@@ -22,8 +22,8 @@ public class Health_and_Damage : MonoBehaviour
         if (life == 0)
         {
             Debug.Log("ya no tiene vida");
-            rg = gameObject.GetComponent<RagdollController>();
-            rg.Toggle();
+            //rg = gameObject.GetComponent<RagdollController>();
+            //rg.Toggle();
         }
     }
 }

@@ -34,11 +34,11 @@ public class RagdollController : MonoBehaviour
         mainCollider = GetComponent<Collider>();
 
         mainRigidbody = GetComponent<Rigidbody>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
+    /* void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
@@ -46,21 +46,21 @@ public class RagdollController : MonoBehaviour
          //   mainCollider.enabled = false;
         }
 
-    }
+    } */
     bool value = true;
     public void Toggle()
     {
-        value = !value;
-
+        value = false;
+        
         foreach (var item in colliders)
         {
-            item.enabled = !value;
+            item.enabled = false;
         }
 
         foreach (var item in rigidbodies)
         {
-            item.isKinematic = value;
-            item.useGravity = !value;
+            item.isKinematic = true;
+            item.useGravity = false;
         }
 
         
@@ -73,9 +73,10 @@ public class RagdollController : MonoBehaviour
     {
         if(collision.transform.tag == "Hit")
         {
+            Debug.Log("Hit");
             value = true;
             Toggle();
         }
     }
-   
+
 }
