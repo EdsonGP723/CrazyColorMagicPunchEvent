@@ -5,11 +5,11 @@ using UnityEngine;
 public class HacerDamage : MonoBehaviour
 {
     public int cantidad = 10;
-    public Material m;
+    private Renderer m;
     
     void Start()
     {
-        
+        m = GetComponent<Renderer>();
     }
 
     
@@ -24,7 +24,8 @@ public class HacerDamage : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<SistemaVida>().RestarVida(cantidad);
-            m.GetColor("red");
+            m.material.SetColor("rojo", Color.red);
+
 
         }
     }
