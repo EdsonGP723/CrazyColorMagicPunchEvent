@@ -74,7 +74,7 @@ public class RagdollController : MonoBehaviour
         {
             Health_and_Damage.life -= 10; 
             var rb = collision.collider.attachedRigidbody;
-            rb.AddForce(-collision.contacts[0].normal * 15000, ForceMode.Impulse);
+            rb.AddForce(-collision.contacts[0].normal * 100, ForceMode.Impulse);
             if (Health_and_Damage.life == 0)
             {
                 value = true;
